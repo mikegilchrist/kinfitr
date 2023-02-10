@@ -158,8 +158,8 @@ bidsdat <- jsondat %>%
   mutate(petinfo = map(jsondata,   jsondat2petinfo),
          blooddata = map(jsondata, jsondat2bd),
          tactimes = map(jsondata,  jsondat2tactimes)) %>%
-  select(-jsondata)
-
+#  select(-jsondata) ## don't remove jsondata
+	mutate()
 
 pbr28 <- petdat %>%
   inner_join(demog) %>%
